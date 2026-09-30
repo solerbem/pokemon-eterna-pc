@@ -118,43 +118,45 @@
     grid-column: 2;
     grid-row: 1 / 3;
 
-    display: grid;
+    display: grid !important;
     grid-template-rows: 15px repeat(4, minmax(0, 1fr));
     gap: 4px;
 }
 
-.eterna-pc .eterna-pc-move {
-    min-width: 0;
-    min-height: 0;
-    padding: 3px 5px;
-
-    display: grid;
-    grid-template-columns: 15px minmax(0, 1fr);
-    gap: 4px;
-    align-items: center;
-
-    border: 1px solid rgba(214, 189, 117, 0.25);
-    border-radius: 5px;
-    background: rgba(8, 13, 11, 0.38);
-
-    color: #eee9d8;
-    font-size: 10px;
-    line-height: 12px;
-    overflow-wrap: anywhere;
-}
-
 .eterna-pc .eterna-pc-move-title {
+    margin: 0;
     color: #d6bd75;
     font-size: 9px;
     font-weight: 700;
     line-height: 15px;
     letter-spacing: 1px;
-    text-align: left;
 }
 
-.eterna-pc .eterna-pc-move span {
+.eterna-pc .eterna-pc-move {
+    min-width: 0;
+    min-height: 0;
+    margin: 0;
+    padding: 3px 5px;
+
+    display: grid !important;
+    grid-template-columns: 15px minmax(0, 1fr);
+    gap: 5px;
+    align-items: center;
+
+    border: 1px solid rgba(214, 189, 117, 0.35);
+    border-radius: 5px;
+    background: rgba(8, 13, 11, 0.5);
+
+    color: #eee9d8;
+    font-size: 10px;
+    line-height: 13px;
+}
+
+.eterna-pc .eterna-pc-move-number {
     width: 15px;
     height: 15px;
+    margin: 0;
+    padding: 0;
 
     display: grid;
     place-items: center;
@@ -165,6 +167,17 @@
     font-size: 9px;
     font-weight: 700;
     line-height: 15px;
+}
+
+.eterna-pc .eterna-pc-move-name {
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+
+    color: #eee9d8;
+    font-size: 10px;
+    line-height: 13px;
+    overflow-wrap: anywhere;
 }
 
 /* Sexo y tamaño en la parte inferior */
