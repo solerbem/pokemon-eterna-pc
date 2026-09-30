@@ -1,0 +1,296 @@
+/* =========================================================
+   POKÉMON ETERNA — PC BOX
+   ========================================================= */
+
+.eterna-pc {
+    --pc-main: #5f735f;
+    --pc-dark: #26352d;
+    --pc-darker: #1b2521;
+    --pc-light: #d9d5bd;
+    --pc-gold: #c99b4b;
+    --pc-orange: #d58b38;
+    --pc-white: #f1eee2;
+    --pc-muted: #aeb5a8;
+
+    width: 430px;
+    min-height: 210px;
+    box-sizing: border-box;
+    padding: 16px;
+
+    position: relative;
+    overflow: hidden;
+
+    background:
+        linear-gradient(135deg, rgba(255,255,255,.035) 25%, transparent 25%) 0 0 / 8px 8px,
+        var(--pc-dark);
+
+    border: 1px solid rgba(201,155,75,.55);
+    border-radius: 12px;
+
+    color: var(--pc-light);
+    font-family: Arial, sans-serif;
+
+    box-shadow:
+        0 5px 15px rgba(0,0,0,.25),
+        inset 0 0 0 1px rgba(255,255,255,.035);
+}
+
+
+/* ---------------------------------------------------------
+   PEQUEÑO DETALLE SUPERIOR
+   --------------------------------------------------------- */
+
+.eterna-pc::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+
+    background: var(--pc-gold);
+}
+
+
+/* ---------------------------------------------------------
+   CABECERA
+   --------------------------------------------------------- */
+
+.eterna-pc-head {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    margin-bottom: 12px;
+}
+
+
+/* ---------------------------------------------------------
+   IMAGEN DEL POKÉMON
+   --------------------------------------------------------- */
+
+.eterna-pc-image {
+    width: 88px;
+    height: 88px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--pc-darker);
+
+    border: 3px solid var(--pc-gold);
+
+    box-shadow:
+        0 0 0 4px var(--pc-dark),
+        0 0 0 5px rgba(201,155,75,.3);
+
+    overflow: hidden;
+
+    color: var(--pc-muted);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.eterna-pc-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* ---------------------------------------------------------
+   INFORMACIÓN PRINCIPAL
+   --------------------------------------------------------- */
+
+.eterna-pc-info {
+    flex: 1;
+    min-width: 0;
+}
+
+
+/* Nombre */
+
+.eterna-pc-name {
+    color: var(--pc-white);
+
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: .5px;
+
+    line-height: 1.1;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* Apodo */
+
+.eterna-pc-nickname {
+    margin-top: 4px;
+
+    color: var(--pc-muted);
+
+    font-size: 11px;
+    font-style: italic;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* Nivel */
+
+.eterna-pc-level {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+
+    margin-top: 9px;
+    padding: 4px 9px;
+
+    background: var(--pc-gold);
+    color: var(--pc-darker);
+
+    border-radius: 4px;
+
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+}
+
+.eterna-pc-level strong {
+    font-size: 15px;
+}
+
+
+/* ---------------------------------------------------------
+   DATOS PEQUEÑOS
+   --------------------------------------------------------- */
+
+.eterna-pc-details {
+    display: flex;
+    gap: 6px;
+
+    margin-top: 10px;
+}
+
+.eterna-pc-detail {
+    flex: 1;
+
+    padding: 5px 6px;
+
+    background: rgba(255,255,255,.045);
+
+    border-left: 2px solid var(--pc-main);
+
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+}
+
+.eterna-pc-detail b {
+    display: block;
+
+    margin-bottom: 2px;
+
+    color: var(--pc-muted);
+
+    font-size: 7px;
+}
+
+
+/* ---------------------------------------------------------
+   MOVIMIENTOS
+   --------------------------------------------------------- */
+
+.eterna-pc-moves {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+
+    margin-top: 12px;
+}
+
+.eterna-pc-move {
+    position: relative;
+
+    padding: 8px 10px;
+
+    background: var(--pc-darker);
+
+    border: 1px solid rgba(255,255,255,.06);
+    border-radius: 4px;
+
+    color: var(--pc-white);
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .3px;
+
+    transition: .2s ease;
+}
+
+
+/* Número pequeño del movimiento */
+
+.eterna-pc-move span {
+    display: inline-flex;
+
+    width: 15px;
+    height: 15px;
+
+    margin-right: 5px;
+
+    align-items: center;
+    justify-content: center;
+
+    background: var(--pc-main);
+
+    border-radius: 50%;
+
+    color: var(--pc-white);
+
+    font-size: 7px;
+}
+
+
+/* ---------------------------------------------------------
+   EFECTO DE MENÚ
+   --------------------------------------------------------- */
+
+.eterna-pc-move:hover {
+    background: var(--pc-main);
+
+    border-color: var(--pc-gold);
+
+    transform: translateX(2px);
+}
+
+
+/* ---------------------------------------------------------
+   INDICADOR DE PC
+   --------------------------------------------------------- */
+
+.eterna-pc-label {
+    position: absolute;
+
+    top: 11px;
+    right: 13px;
+
+    color: rgba(217,213,189,.35);
+
+    font-size: 7px;
+    font-weight: bold;
+
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
