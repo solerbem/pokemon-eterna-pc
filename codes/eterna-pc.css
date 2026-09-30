@@ -4,7 +4,7 @@
 
 .eterna-pc {
     --pc-main: #657a65;
-   --pc-dark: #5a2020;
+    --pc-dark: #5a2020;
     --pc-darker: #151c19;
     --pc-light: #d9d5bd;
     --pc-gold: #c99b4b;
@@ -18,7 +18,7 @@
     position: relative;
     overflow: hidden;
 
-    padding: 16px;
+    padding: 13px;
 
     background: var(--pc-dark);
 
@@ -74,8 +74,8 @@
 .eterna-pc-label {
     position: absolute;
 
-    top: 11px;
-    right: 14px;
+    top: 10px;
+    right: 13px;
 
     color: rgba(217,213,189,.3);
 
@@ -95,12 +95,12 @@
     display: flex;
     align-items: center;
 
-    gap: 15px;
+    gap: 12px;
 
     width: 100%;
-    height: 112px;
+    height: 116px;
 
-    margin-top: 10px;
+    margin-top: 8px;
 }
 
 
@@ -109,10 +109,10 @@
    --------------------------------------------------------- */
 
 .eterna-pc-image {
-    width: 92px;
-    height: 92px;
+    width: 112px;
+    height: 112px;
 
-    flex: 0 0 92px;
+    flex: 0 0 112px;
 
     display: flex;
     align-items: center;
@@ -149,6 +149,7 @@
     flex: 1;
 
     min-width: 0;
+    height: 100%;
 
     display: flex;
     flex-direction: column;
@@ -164,7 +165,7 @@
 .eterna-pc-name {
     color: var(--pc-white);
 
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
 
     line-height: 1.1;
@@ -180,11 +181,11 @@
    --------------------------------------------------------- */
 
 .eterna-pc-nickname {
-    margin-top: 5px;
+    margin-top: 4px;
 
     color: var(--pc-muted);
 
-    font-size: 11px;
+    font-size: 10px;
     font-style: italic;
 
     white-space: nowrap;
@@ -202,11 +203,11 @@
     align-items: center;
     align-self: flex-start;
 
-    gap: 4px;
+    gap: 3px;
 
-    margin-top: 9px;
+    margin-top: 7px;
 
-    padding: 4px 8px;
+    padding: 3px 7px;
 
     background: var(--pc-gold);
 
@@ -214,14 +215,14 @@
 
     border-radius: 4px;
 
-    font-size: 8px;
+    font-size: 7px;
     font-weight: bold;
 
     text-transform: uppercase;
 }
 
 .eterna-pc-level strong {
-    font-size: 12px;
+    font-size: 11px;
 }
 
 
@@ -234,11 +235,11 @@
 
     grid-template-columns: 1fr 1fr;
 
-    gap: 6px;
+    gap: 5px;
 
     width: 100%;
 
-    margin-top: 8px;
+    margin-top: 6px;
 }
 
 .eterna-pc-detail {
@@ -246,7 +247,7 @@
 
     min-width: 0;
 
-    padding: 5px 7px;
+    padding: 4px 5px;
 
     background: rgba(255,255,255,.04);
 
@@ -254,7 +255,7 @@
 
     color: var(--pc-light);
 
-    font-size: 8px;
+    font-size: 7px;
 
     white-space: nowrap;
     overflow: hidden;
@@ -264,18 +265,18 @@
 .eterna-pc-detail b {
     display: block;
 
-    margin-bottom: 2px;
+    margin-bottom: 1px;
 
     color: var(--pc-muted);
 
-    font-size: 7px;
+    font-size: 6px;
 
     text-transform: uppercase;
 }
 
 
 /* ---------------------------------------------------------
-   MOVIMIENTOS — TÍTULO
+   MOVIMIENTOS
    --------------------------------------------------------- */
 
 .eterna-pc-moves {
@@ -283,11 +284,11 @@
 
     grid-template-columns: 1fr 1fr;
 
-    gap: 7px;
+    gap: 6px;
 
     width: 100%;
 
-    margin-top: 18px;
+    margin-top: 10px;
 }
 
 .eterna-pc-moves::before {
@@ -305,21 +306,21 @@
 
 
 /* ---------------------------------------------------------
-   MOVIMIENTOS
+   MOVIMIENTO
    --------------------------------------------------------- */
 
 .eterna-pc-move {
     box-sizing: border-box;
 
     width: 100%;
-    height: 34px;
+    height: 30px;
 
     display: flex;
     align-items: center;
 
     min-width: 0;
 
-    padding: 6px 8px;
+    padding: 5px 7px;
 
     background: var(--pc-darker);
 
@@ -329,7 +330,7 @@
 
     color: var(--pc-white);
 
-    font-size: 8px;
+    font-size: 7px;
     font-weight: bold;
 
     line-height: 1.1;
@@ -351,10 +352,10 @@
     align-items: center;
     justify-content: center;
 
-    flex: 0 0 16px;
+    flex: 0 0 15px;
 
-    width: 16px;
-    height: 16px;
+    width: 15px;
+    height: 15px;
 
     margin-right: 5px;
 
@@ -364,7 +365,7 @@
 
     color: var(--pc-white);
 
-    font-size: 7px;
+    font-size: 6px;
 }
 
 
