@@ -431,3 +431,7 @@
         ),
         var(--pc-darker);
 }
+.prueba-tamano {
+    width: 540px !important;
+    height: 250px !important;
+}
