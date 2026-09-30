@@ -1,351 +1,215 @@
-/* =========================================================
-   POKÉMON ETERNA — PC BOX
-   Diseño flexible
-   ========================================================= */
+/* Tarjeta principal: 300 × 300 px */
+.eterna-pc {
+    box-sizing: border-box;
+    width: 300px;
+    height: 300px;
+    max-width: 100%;
+    margin: 15px auto;
+    padding: 12px;
 
-.eterna-pc,
-.eterna-pc * {
+    display: grid;
+    grid-template-rows: 16px minmax(0, 1fr) 36px;
+    gap: 8px;
+
+    border: 1px solid rgba(205, 180, 111, 0.55);
+    border-radius: 12px;
+    background:
+        radial-gradient(ellipse at 10% 12%, rgba(111, 132, 96, 0.2), transparent 48%),
+        linear-gradient(145deg, #202923, #151b18);
+    box-shadow:
+        0 7px 20px rgba(0, 0, 0, 0.3),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.025);
+
+    color: #eee9d8;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Restablece el cálculo de tamaños para los elementos de la tarjeta */
+.eterna-pc *,
+.eterna-pc *::before,
+.eterna-pc *::after {
     box-sizing: border-box;
 }
 
-.eterna-pc {
-    --pc-main: #657a65;
-    --pc-dark: #202a25;
-    --pc-darker: #151c19;
-    --pc-light: #d9d5bd;
-    --pc-gold: #c99b4b;
-    --pc-white: #f1eee2;
-    --pc-muted: #9fa99e;
-
-    width: 100%;
-    max-width: 700px;
-    min-width: 520px;
-
-    margin: 15px auto;
-    padding: 18px;
-
-    background:
-        radial-gradient(
-            circle at 12% 35%,
-            rgba(105,126,91,.18),
-            transparent 42%
-        ),
-        linear-gradient(
-            145deg,
-            #202a25 0%,
-            #151c19 100%
-        );
-
-    border: 1px solid rgba(201,155,75,.65);
-    border-radius: 12px;
-
-    color: var(--pc-light);
-    font-family: Arial, Helvetica, sans-serif;
-
-    box-shadow:
-        0 6px 18px rgba(0,0,0,.30),
-        inset 0 0 0 1px rgba(255,255,255,.025);
+/* Título superior */
+.eterna-pc .eterna-pc-label {
+    min-width: 0;
+    color: #d6bd75;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 1.6px;
+    text-align: right;
 }
 
+/* Zona principal: imagen e información a la izquierda; movimientos a la derecha */
+.eterna-pc .eterna-pc-head {
+    min-width: 0;
+    min-height: 0;
 
-/* ---------------------------------------------------------
-   ENCABEZADO
-   --------------------------------------------------------- */
-
-.eterna-pc-label {
-    display: block;
-
-    margin: 0 0 14px;
-    padding: 0 0 8px;
-
-    border-bottom: 1px solid rgba(201,155,75,.25);
-
-    color: rgba(217,213,189,.45);
-
-    font-size: 8px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    line-height: 10px;
-    text-transform: uppercase;
-}
-
-
-/* ---------------------------------------------------------
-   ZONA PRINCIPAL
-   --------------------------------------------------------- */
-
-.eterna-pc-head {
     display: grid;
-
-    grid-template-columns: 145px minmax(150px, 1fr) minmax(210px, 1.5fr);
-    gap: 20px;
-
-    align-items: start;
-
-    width: 100%;
+    grid-template-columns: 104px minmax(0, 1fr);
+    grid-template-rows: 104px minmax(0, 1fr);
+    gap: 5px 10px;
 }
 
+/* Imagen circular de 100 × 100 px */
+.eterna-pc .eterna-pc-image {
+    width: 100px;
+    height: 100px;
+    justify-self: center;
+    align-self: center;
 
-/* ---------------------------------------------------------
-   IMAGEN
-   --------------------------------------------------------- */
+    display: grid;
+    place-items: center;
 
-.eterna-pc-image {
-    width: 125px;
-    height: 125px;
-
-    margin: 0 auto;
-
-    padding: 0;
-
-    overflow: hidden;
-
-    background:
-        radial-gradient(
-            circle,
-            rgba(127,146,105,.28),
-            #151c19 72%
-        );
-
-    border: 2px solid var(--pc-gold);
+    border: 1px solid rgba(214, 189, 117, 0.65);
     border-radius: 50%;
-
-    box-shadow:
-        0 0 0 3px #202a25,
-        0 0 0 4px rgba(201,155,75,.22),
-        inset 0 0 15px rgba(0,0,0,.35);
+    background: radial-gradient(circle, #465443, #202923 72%);
+    box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.35);
 }
 
-.eterna-pc-image img {
-    display: block;
-
-    width: 100%;
-    height: 100%;
-
-    margin: 0;
-    padding: 0;
-
+.eterna-pc .eterna-pc-image img {
+    display: block !important;
+    width: 100px !important;
+    height: 100px !important;
+    max-width: 100px !important;
+    max-height: 100px !important;
+    margin: 0 !important;
     object-fit: contain;
 }
 
-
-/* ---------------------------------------------------------
-   INFORMACIÓN DEL POKÉMON
-   --------------------------------------------------------- */
-
-.eterna-pc-info {
+/* Nombre, apodo y nivel debajo de la imagen */
+.eterna-pc .eterna-pc-info {
     min-width: 0;
-
-    padding-top: 8px;
-}
-
-.eterna-pc-name {
-    margin: 0;
-
-    color: var(--pc-white);
-
-    font-size: 18px;
-    font-weight: bold;
-    line-height: 22px;
-
-    text-transform: uppercase;
-
+    align-self: start;
+    text-align: center;
     overflow-wrap: anywhere;
 }
 
-.eterna-pc-nickname {
-    margin: 3px 0 10px;
+.eterna-pc .eterna-pc-name {
+    color: #f3eddb;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    overflow-wrap: anywhere;
+}
 
-    color: var(--pc-muted);
-
-    font-size: 10px;
+.eterna-pc .eterna-pc-nickname {
+    color: #cbbd91;
+    font-size: 11px;
     font-style: italic;
     line-height: 14px;
+    overflow-wrap: anywhere;
 }
 
-.eterna-pc-level {
-    display: inline-flex;
-    align-items: center;
-
-    margin: 0;
-    padding: 4px 8px;
-
-    background: var(--pc-gold);
-
-    border-radius: 4px;
-
-    color: var(--pc-darker);
-
-    font-size: 8px;
-    font-weight: bold;
-    line-height: 12px;
-
-    text-transform: uppercase;
-}
-
-.eterna-pc-level strong {
-    margin-left: 4px;
-
-    font-size: 12px;
-}
-
-
-/* ---------------------------------------------------------
-   MOVIMIENTOS
-   --------------------------------------------------------- */
-
-.eterna-pc-moves {
-    min-width: 0;
-
-    padding-top: 3px;
-}
-
-.eterna-pc-moves::before {
-    content: "MOVIMIENTOS";
-
-    display: block;
-
-    margin: 0 0 7px;
-
-    color: var(--pc-muted);
-
-    font-size: 7px;
-    font-weight: bold;
-    letter-spacing: 1.5px;
-    line-height: 10px;
-
-    text-transform: uppercase;
-}
-
-.eterna-pc-move {
-    display: flex;
-    align-items: center;
-
-    width: 100%;
-    min-height: 27px;
-
-    margin: 0 0 6px;
-    padding: 4px 8px;
-
-    background: rgba(8,13,11,.55);
-
-    border: 1px solid rgba(201,155,75,.23);
-    border-radius: 4px;
-
-    color: var(--pc-white);
-
-    font-size: 9px;
-    font-weight: bold;
-    line-height: 17px;
-}
-
-.eterna-pc-move span {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    flex: 0 0 16px;
-
-    width: 16px;
-    height: 16px;
-
-    margin-right: 7px;
-
-    background: var(--pc-main);
-
-    border-radius: 50%;
-
-    color: var(--pc-white);
-
-    font-size: 7px;
-    line-height: 16px;
-}
-
-
-/* ---------------------------------------------------------
-   SEXO Y TAMAÑO
-   --------------------------------------------------------- */
-
-.eterna-pc-details {
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-
-    width: 100%;
-
-    margin-top: 16px;
-    padding-top: 12px;
-
-    border-top: 1px solid rgba(201,155,75,.20);
-}
-
-.eterna-pc-detail {
-    min-height: 42px;
-
-    padding: 6px 10px;
-
-    background: rgba(255,255,255,.035);
-
-    border-left: 2px solid var(--pc-main);
-
-    color: var(--pc-light);
-
-    font-size: 9px;
+.eterna-pc .eterna-pc-level {
+    color: #aab49f;
+    font-size: 10px;
     line-height: 14px;
 }
 
-.eterna-pc-detail b {
-    display: block;
+/* Columna de movimientos: ocupa toda la altura disponible a la derecha */
+.eterna-pc .eterna-pc-moves {
+    min-width: 0;
+    min-height: 0;
+    grid-column: 2;
+    grid-row: 1 / 3;
 
-    margin: 0 0 2px;
+    display: grid;
+    grid-template-rows: 15px repeat(4, minmax(0, 1fr));
+    gap: 4px;
+}
 
-    color: var(--pc-muted);
+.eterna-pc .eterna-pc-move {
+    min-width: 0;
+    min-height: 0;
+    padding: 3px 5px;
 
-    font-size: 6px;
-    font-weight: bold;
+    display: grid;
+    grid-template-columns: 15px minmax(0, 1fr);
+    gap: 4px;
+    align-items: center;
+
+    border: 1px solid rgba(214, 189, 117, 0.25);
+    border-radius: 5px;
+    background: rgba(8, 13, 11, 0.38);
+
+    color: #eee9d8;
+    font-size: 10px;
+    line-height: 12px;
+    overflow-wrap: anywhere;
+}
+
+.eterna-pc .eterna-pc-move-title {
+    color: #d6bd75;
+    font-size: 9px;
+    font-weight: 700;
+    line-height: 15px;
     letter-spacing: 1px;
-    line-height: 9px;
+    text-align: left;
+}
 
+.eterna-pc .eterna-pc-move span {
+    width: 15px;
+    height: 15px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+    background: rgba(183, 157, 89, 0.2);
+    color: #ddc77f;
+    font-size: 9px;
+    font-weight: 700;
+    line-height: 15px;
+}
+
+/* Sexo y tamaño en la parte inferior */
+.eterna-pc .eterna-pc-details {
+    min-width: 0;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    align-items: center;
+
+    border-top: 1px solid rgba(214, 189, 117, 0.3);
+}
+
+.eterna-pc .eterna-pc-detail {
+    min-width: 0;
+    color: #eee9d8;
+    font-size: 10px;
+    line-height: 13px;
+    overflow-wrap: anywhere;
+}
+
+.eterna-pc .eterna-pc-detail:last-child {
+    text-align: right;
+}
+
+.eterna-pc .eterna-pc-detail b {
+    display: block;
+    color: #a99e78;
+    font-size: 8px;
+    line-height: 11px;
+    letter-spacing: 1px;
     text-transform: uppercase;
 }
 
-
-/* ---------------------------------------------------------
-   DETALLES VISUALES
-   --------------------------------------------------------- */
-
-.eterna-pc:hover {
-    border-color: var(--pc-gold);
-
-    box-shadow:
-        0 8px 22px rgba(0,0,0,.35),
-        0 0 12px rgba(201,155,75,.10);
-}
-
-.eterna-pc-move:hover {
-    background: var(--pc-main);
-    border-color: var(--pc-gold);
-}
-
-
-/* ---------------------------------------------------------
-   AJUSTE PARA PANTALLAS PEQUEÑAS
-   --------------------------------------------------------- */
-
-@media (max-width: 600px) {
-
+/* Realce discreto al pasar el cursor */
+@media (hover: hover) {
     .eterna-pc {
-        min-width: 0;
-        width: 100%;
+        transition: border-color 160ms ease, box-shadow 160ms ease;
     }
 
-    .eterna-pc-head {
-        grid-template-columns: 125px 1fr;
+    .eterna-pc:hover {
+        border-color: rgba(214, 189, 117, 0.85);
+        box-shadow:
+            0 9px 24px rgba(0, 0, 0, 0.36),
+            0 0 12px rgba(214, 189, 117, 0.08);
     }
-
-    .eterna-pc-moves {
-        grid-column: 1 / -1;
-    }
-
 }
