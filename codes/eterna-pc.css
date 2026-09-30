@@ -11,25 +11,25 @@
     --pc-white: #f1eee2;
     --pc-muted: #9fa99e;
 
-    width: 260px;
-    height: 145px;
+    width: 300px;
+    height: 300px;
     box-sizing: border-box;
 
     position: relative;
     overflow: hidden;
 
-    padding: 10px;
+    padding: 16px;
 
     background: var(--pc-dark);
 
     border: 1px solid rgba(201,155,75,.65);
-    border-radius: 8px;
+    border-radius: 10px;
 
     color: var(--pc-light);
     font-family: Arial, sans-serif;
 
     box-shadow:
-        0 3px 10px rgba(0,0,0,.25),
+        0 4px 14px rgba(0,0,0,.25),
         inset 0 0 0 1px rgba(255,255,255,.03);
 
     transition: .2s ease;
@@ -48,7 +48,7 @@
     left: 0;
 
     width: 100%;
-    height: 3px;
+    height: 4px;
 
     background: var(--pc-gold);
 }
@@ -62,8 +62,8 @@
     border-color: var(--pc-gold);
 
     box-shadow:
-        0 5px 16px rgba(0,0,0,.35),
-        0 0 10px rgba(201,155,75,.12);
+        0 6px 18px rgba(0,0,0,.35),
+        0 0 12px rgba(201,155,75,.12);
 }
 
 
@@ -74,15 +74,15 @@
 .eterna-pc-label {
     position: absolute;
 
-    top: 7px;
-    right: 9px;
+    top: 11px;
+    right: 14px;
 
     color: rgba(217,213,189,.28);
 
-    font-size: 6px;
+    font-size: 7px;
     font-weight: bold;
 
-    letter-spacing: 1.2px;
+    letter-spacing: 1.5px;
     text-transform: uppercase;
 }
 
@@ -95,9 +95,11 @@
     display: flex;
     align-items: center;
 
-    gap: 9px;
+    gap: 14px;
 
-    height: 73px;
+    height: 105px;
+
+    margin-top: 8px;
 }
 
 
@@ -106,8 +108,8 @@
    --------------------------------------------------------- */
 
 .eterna-pc-image {
-    width: 62px;
-    height: 62px;
+    width: 90px;
+    height: 90px;
 
     flex-shrink: 0;
 
@@ -124,12 +126,12 @@
     border: 2px solid var(--pc-gold);
 
     box-shadow:
-        0 0 0 3px var(--pc-dark),
-        0 0 0 4px rgba(201,155,75,.25);
+        0 0 0 4px var(--pc-dark),
+        0 0 0 5px rgba(201,155,75,.25);
 
     color: var(--pc-muted);
 
-    font-size: 7px;
+    font-size: 8px;
     text-transform: uppercase;
     letter-spacing: .5px;
 }
@@ -159,10 +161,10 @@
 .eterna-pc-name {
     color: var(--pc-white);
 
-    font-size: 15px;
+    font-size: 18px;
     font-weight: 700;
 
-    line-height: 1;
+    line-height: 1.1;
 
     white-space: nowrap;
     overflow: hidden;
@@ -173,11 +175,11 @@
 /* Apodo */
 
 .eterna-pc-nickname {
-    margin-top: 3px;
+    margin-top: 5px;
 
     color: var(--pc-muted);
 
-    font-size: 9px;
+    font-size: 11px;
     font-style: italic;
 
     white-space: nowrap;
@@ -194,27 +196,27 @@
     display: inline-flex;
     align-items: center;
 
-    gap: 3px;
+    gap: 4px;
 
-    margin-top: 6px;
+    margin-top: 9px;
 
-    padding: 3px 6px;
+    padding: 4px 8px;
 
     background: var(--pc-gold);
 
     color: var(--pc-darker);
 
-    border-radius: 3px;
+    border-radius: 4px;
 
-    font-size: 7px;
+    font-size: 8px;
     font-weight: 800;
 
     text-transform: uppercase;
-    letter-spacing: .4px;
+    letter-spacing: .5px;
 }
 
 .eterna-pc-level strong {
-    font-size: 10px;
+    font-size: 12px;
 }
 
 
@@ -225,9 +227,9 @@
 .eterna-pc-details {
     display: flex;
 
-    gap: 4px;
+    gap: 5px;
 
-    margin-top: 5px;
+    margin-top: 7px;
 }
 
 .eterna-pc-detail {
@@ -235,15 +237,15 @@
 
     min-width: 0;
 
-    padding: 3px 4px;
+    padding: 5px 6px;
 
     background: rgba(255,255,255,.04);
 
-    border-left: 1px solid var(--pc-main);
+    border-left: 2px solid var(--pc-main);
 
     color: var(--pc-light);
 
-    font-size: 7px;
+    font-size: 8px;
 
     white-space: nowrap;
     overflow: hidden;
@@ -251,13 +253,35 @@
 }
 
 .eterna-pc-detail b {
-    margin-right: 3px;
+    display: block;
+
+    margin-bottom: 2px;
 
     color: var(--pc-muted);
 
-    font-size: 6px;
+    font-size: 7px;
 
     text-transform: uppercase;
+}
+
+
+/* ---------------------------------------------------------
+   SEPARADOR
+   --------------------------------------------------------- */
+
+.eterna-pc-moves::before {
+    content: "MOVIMIENTOS";
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: var(--pc-muted);
+
+    font-size: 7px;
+    font-weight: bold;
+
+    letter-spacing: 1.2px;
 }
 
 
@@ -270,9 +294,9 @@
 
     grid-template-columns: 1fr 1fr;
 
-    gap: 4px;
+    gap: 7px;
 
-    margin-top: 7px;
+    margin-top: 17px;
 }
 
 
@@ -281,17 +305,24 @@
 .eterna-pc-move {
     min-width: 0;
 
-    padding: 5px 6px;
+    min-height: 32px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+
+    padding: 6px 8px;
 
     background: var(--pc-darker);
 
     border: 1px solid rgba(255,255,255,.055);
 
-    border-radius: 3px;
+    border-radius: 4px;
 
     color: var(--pc-white);
 
-    font-size: 7px;
+    font-size: 8px;
     font-weight: 700;
 
     line-height: 1.1;
@@ -309,10 +340,12 @@
 .eterna-pc-move span {
     display: inline-flex;
 
-    width: 12px;
-    height: 12px;
+    width: 16px;
+    height: 16px;
 
-    margin-right: 3px;
+    flex-shrink: 0;
+
+    margin-right: 5px;
 
     align-items: center;
     justify-content: center;
@@ -323,7 +356,7 @@
 
     color: var(--pc-white);
 
-    font-size: 6px;
+    font-size: 7px;
 }
 
 
